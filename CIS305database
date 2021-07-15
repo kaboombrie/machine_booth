@@ -1,0 +1,18 @@
+use cis305;
+ 
+if object_id('dbo.booth', 'U') is not null
+       drop table dbo.booth;
+
+CREATE TABLE Booth (
+Booth_Product CHAR(15),
+Booth_Price money,
+);
+
+use cis305;
+ 
+if object_id('dbo.MACHINE', 'U') is not null
+       drop table dbo.MACHINE;
+CREATE TABLE Machine (
+	Machine_Product CHAR(15),
+	Machine_Price money,
+);
