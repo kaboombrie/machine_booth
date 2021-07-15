@@ -1,0 +1,29 @@
+use cis305;
+
+ALTER TABLE Booth
+ADD FOREIGN KEY (product_ID) REFERENCES product(product_ID);
+
+ALTER TABLE Machine
+ADD FOREIGN KEY (product_ID) REFERENCES product(product_ID);
+
+use cis305;
+
+ALTER TABLE Booth
+ADD CHECK (Booth_Price>0.00);
+
+ALTER TABLE Machine
+ADD CHECK (Machine_Price>0.00);
+
+
+USE [cis305]
+GO
+
+ALTER TABLE [dbo].[Booth]  WITH CHECK ADD CHECK  (([Booth_Price]>(0.00)))
+GO
+
+USE [cis305]
+GO
+
+ALTER TABLE [dbo].[Machine]  WITH CHECK ADD CHECK  (([Machine_Price]>(0.00)))
+GO
+
